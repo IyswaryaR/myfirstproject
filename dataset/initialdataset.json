@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "newoutputfile",
-				"folderPath": "output",
+				"fileName": "newarchive",
+				"folderPath": "archive",
 				"fileSystem": "adfproject"
 			},
 			"columnDelimiter": ",",
