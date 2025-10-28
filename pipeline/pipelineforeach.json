@@ -17,7 +17,17 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "sourceforeach",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"pp_contain": {
+								"value": "@pipeline().parameters.pp_cont",
+								"type": "Expression"
+							},
+							"pp_folder": {
+								"value": "@pipeline().parameters.pp_folder",
+								"type": "Expression"
+							}
+						}
 					},
 					"fieldList": [
 						"childItems"
@@ -41,7 +51,7 @@
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "copyfrommeta",
+							"name": "Copyfromfolder",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
@@ -87,18 +97,18 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "sourceforeach",
+									"referenceName": "source",
 									"type": "DatasetReference",
 									"parameters": {
-										"pp_contain": {
+										"ds_con": {
 											"value": "@pipeline().parameters.pp_cont",
 											"type": "Expression"
 										},
-										"pp_folder": {
+										"ds_folder": {
 											"value": "@pipeline().parameters.pp_folder",
 											"type": "Expression"
 										},
-										"pp_filename": {
+										"ds_file": {
 											"value": "@item().name",
 											"type": "Expression"
 										}
@@ -107,18 +117,18 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "sourceforeach",
+									"referenceName": "source",
 									"type": "DatasetReference",
 									"parameters": {
-										"pp_contain": {
+										"ds_con": {
 											"value": "@pipeline().parameters.pp_cont",
 											"type": "Expression"
 										},
-										"pp_folder": {
-											"value": "@pipeline().parameters.pp_outputfile",
+										"ds_folder": {
+											"value": "@pipeline().parameters.pp_inputfile",
 											"type": "Expression"
 										},
-										"pp_filename": {
+										"ds_file": {
 											"value": "@item().name",
 											"type": "Expression"
 										}
