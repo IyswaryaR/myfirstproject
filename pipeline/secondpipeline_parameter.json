@@ -19,6 +19,20 @@
 				}
 			}
 		],
+		"parameters": {
+			"ppcon": {
+				"type": "string"
+			},
+			"ppinput": {
+				"type": "string"
+			},
+			"ppoutput": {
+				"type": "string"
+			},
+			"ppfilename": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
