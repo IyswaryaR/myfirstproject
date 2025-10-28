@@ -11,9 +11,6 @@
 			},
 			"pp_folder": {
 				"type": "string"
-			},
-			"pp_filename": {
-				"type": "string"
 			}
 		},
 		"annotations": [],
@@ -21,8 +18,14 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "input",
-				"fileSystem": "adfproject"
+				"folderPath": {
+					"value": "@dataset().pp_folder",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().pp_contain",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
