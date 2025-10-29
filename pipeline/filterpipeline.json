@@ -271,7 +271,7 @@
 				"type": "string"
 			},
 			"pp_inputfile": {
-				"type": "string"
+				"type": "array"
 			},
 			"pp_outputfile": {
 				"type": "string"
