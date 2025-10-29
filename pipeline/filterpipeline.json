@@ -160,7 +160,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"items": {
-									"value": "@item().name",
+									"value": "@array(item().myStringField)",
 									"type": "Expression"
 								},
 								"condition": {
