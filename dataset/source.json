@@ -13,7 +13,7 @@
 				"type": "string"
 			},
 			"ds_file": {
-				"type": "array"
+				"type": "string"
 			}
 		},
 		"annotations": [],
