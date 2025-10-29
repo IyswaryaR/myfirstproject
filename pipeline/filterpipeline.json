@@ -64,7 +64,7 @@
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "Copyfromfoldertxt",
+							"name": "Copy_txt",
 							"type": "Copy",
 							"dependsOn": [
 								{
@@ -170,7 +170,7 @@
 							}
 						},
 						{
-							"name": "Copyfromfoldecsv",
+							"name": "Copy_csv",
 							"type": "Copy",
 							"dependsOn": [
 								{
@@ -271,7 +271,7 @@
 				"type": "string"
 			},
 			"pp_inputfile": {
-				"type": "array"
+				"type": "string"
 			},
 			"pp_outputfile": {
 				"type": "string"
