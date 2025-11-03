@@ -137,7 +137,7 @@
 											"value": "@pipeline().parameters.pp_cont",
 											"type": "Expression"
 										},
-										"ds_folder": "output_txt",
+										"ds_folder": "output_txt_dup",
 										"ds_file": {
 											"value": "@item().name",
 											"type": "Expression"
