@@ -16,27 +16,14 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "sourceforeach",
-						"type": "DatasetReference",
-						"parameters": {
-							"pp_contain": {
-								"value": "@pipeline().parameters.pp_cont",
-								"type": "Expression"
-							},
-							"pp_folder": {
-								"value": "@pipeline().parameters.pp_folder",
-								"type": "Expression"
-							}
-						}
+						"referenceName": "get",
+						"type": "DatasetReference"
 					},
 					"fieldList": [
-						"childItems",
-						"itemName",
-						"itemType"
+						"childItems"
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
-						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -58,7 +45,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadata1').output.childItems",
+						"value": "@activity('Filtertxt').output",
 						"type": "Expression"
 					},
 					"isSequential": true,
@@ -186,7 +173,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadata1').output.childItems",
+						"value": "@activity('Filtertxt').output",
 						"type": "Expression"
 					},
 					"isSequential": true,
