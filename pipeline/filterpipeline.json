@@ -49,7 +49,7 @@
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Get Metadata1",
+						"activity": "Filtertxt",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -66,14 +66,7 @@
 						{
 							"name": "Copy_txt",
 							"type": "Copy",
-							"dependsOn": [
-								{
-									"activity": "Filterfortxt",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								}
-							],
+							"dependsOn": [],
 							"policy": {
 								"timeout": "0.12:00:00",
 								"retry": 0,
@@ -152,34 +145,79 @@
 									}
 								}
 							]
-						},
+						}
+					]
+				}
+			},
+			{
+				"name": "Filtertxt",
+				"type": "Filter",
+				"dependsOn": [
+					{
+						"activity": "Get Metadata1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Get Metadata1').output.childItems",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@endswith(item().name,'.txt')",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Filtercsv",
+				"type": "Filter",
+				"dependsOn": [
+					{
+						"activity": "Get Metadata1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Get Metadata1').output.childItems",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@endswith(item().name,'.csv')",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "ForEach1_copy1",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Filtercsv",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Get Metadata1').output.childItems",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
 						{
-							"name": "Filterfortxt",
-							"type": "Filter",
-							"dependsOn": [],
-							"userProperties": [],
-							"typeProperties": {
-								"items": {
-									"value": "@array(item().name)",
-									"type": "Expression"
-								},
-								"condition": {
-									"value": "@endswith(item().name, '.txt')",
-									"type": "Expression"
-								}
-							}
-						},
-						{
-							"name": "Copy_csv",
+							"name": "Copy_csv_copy1",
 							"type": "Copy",
-							"dependsOn": [
-								{
-									"activity": "Filterfortxt",
-									"dependencyConditions": [
-										"Failed"
-									]
-								}
-							],
+							"dependsOn": [],
 							"policy": {
 								"timeout": "0.12:00:00",
 								"retry": 0,
