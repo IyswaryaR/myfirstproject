@@ -5,34 +5,13 @@
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"ds_con": {
-				"type": "string"
-			},
-			"ds_folder": {
-				"type": "string"
-			},
-			"ds_file": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().ds_file",
-					"type": "Expression"
-				},
-				"folderPath": {
-					"value": "@dataset().ds_folder",
-					"type": "Expression"
-				},
-				"fileSystem": {
-					"value": "@dataset().ds_con",
-					"type": "Expression"
-				}
+				"folderPath": "out_txt",
+				"fileSystem": "adfproject"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
