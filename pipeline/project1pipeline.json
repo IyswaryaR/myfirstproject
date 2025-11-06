@@ -91,7 +91,7 @@
 				"typeProperties": {
 					"notebookPath": "/Users/iyswarya.senthil@gmail.com/Projecy/csv_to_tableloader",
 					"baseParameters": {
-						"file_name": {
+						"file_path": {
 							"value": "@pipeline().parameters.file_name",
 							"type": "Expression"
 						}
