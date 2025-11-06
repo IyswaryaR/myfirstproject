@@ -65,7 +65,7 @@
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "Copyfromfolder",
+							"name": "Copydata",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
@@ -131,22 +131,8 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "basedataset",
-									"type": "DatasetReference",
-									"parameters": {
-										"ds_storage": {
-											"value": "@pipeline().parameters.pp_storage",
-											"type": "Expression"
-										},
-										"ds_folder": {
-											"value": "@pipeline().parameters.pp_destination",
-											"type": "Expression"
-										},
-										"ds_filename": {
-											"value": "@pipeline().parameters.pp_file",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "desdataset",
+									"type": "DatasetReference"
 								}
 							]
 						}
