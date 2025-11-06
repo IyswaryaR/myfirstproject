@@ -24,7 +24,7 @@
 								"type": "Expression"
 							},
 							"ds_folder": {
-								"value": "@pipeline().parameters.pp_destination",
+								"value": "@pipeline().parameters.pp_source",
 								"type": "Expression"
 							},
 							"ds_filename": {
