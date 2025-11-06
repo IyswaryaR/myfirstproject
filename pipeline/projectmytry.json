@@ -132,7 +132,21 @@
 							"outputs": [
 								{
 									"referenceName": "desdataset",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"ds_source": {
+											"value": "@pipeline().parameters.pp_storage",
+											"type": "Expression"
+										},
+										"ds_folder": {
+											"value": "@pipeline().parameters.pp_destination",
+											"type": "Expression"
+										},
+										"ds_file": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
