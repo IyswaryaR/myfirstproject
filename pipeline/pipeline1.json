@@ -18,7 +18,7 @@
 					"notebookPath": "/Users/iyswarya.senthil@gmail.com/Projecy/csv_to_tableloader"
 				},
 				"linkedServiceName": {
-					"referenceName": "AzureDatabricks3",
+					"referenceName": "AzureDatabricks2",
 					"type": "LinkedServiceReference"
 				}
 			}
