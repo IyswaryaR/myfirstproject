@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/iyswarya.senthil@gmail.com/Projecy/csv_to_tableloader"
+					"notebookPath": "/Users/iyswarya.senthil@gmail.com/Projecy/notebook_mytry"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks3",
