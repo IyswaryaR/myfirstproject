@@ -140,7 +140,7 @@
 										"type": "DelimitedTextWriteSettings",
 										"quoteAllText": true,
 										"fileExtension": {
-											"value": "@concat(item().name,'.csv')",
+											"value": "@concat('input2',item().name,'.csv')",
 											"type": "Expression"
 										}
 									}
