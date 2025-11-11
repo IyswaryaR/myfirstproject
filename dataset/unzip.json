@@ -1,5 +1,5 @@
 {
-	"name": "unziplanding",
+	"name": "unzip",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "input1",
+				"fileName": "SalesLTProductModel.zip",
+				"folderPath": "landing",
 				"fileSystem": "adfproject"
 			},
 			"compression": {
