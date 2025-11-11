@@ -139,7 +139,10 @@
 									"formatSettings": {
 										"type": "DelimitedTextWriteSettings",
 										"quoteAllText": true,
-										"fileExtension": ".csv"
+										"fileExtension": {
+											"value": "@concat('input2', item().name, '.csv')",
+											"type": "Expression"
+										}
 									}
 								},
 								"enableStaging": false,
