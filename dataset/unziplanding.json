@@ -12,10 +12,6 @@
 				"type": "AzureBlobFSLocation",
 				"folderPath": "input1",
 				"fileSystem": "adfproject"
-			},
-			"compression": {
-				"type": "ZipDeflate",
-				"level": "Optimal"
 			}
 		}
 	}
