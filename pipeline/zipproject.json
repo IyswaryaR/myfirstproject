@@ -139,7 +139,7 @@
 									"formatSettings": {
 										"type": "DelimitedTextWriteSettings",
 										"quoteAllText": true,
-										"fileExtension": ".csv"
+										"fileExtension": ".txt"
 									}
 								},
 								"enableStaging": false,
@@ -168,7 +168,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "csv_landling",
+									"referenceName": "parameterdata",
 									"type": "DatasetReference"
 								}
 							]
