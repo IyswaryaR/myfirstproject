@@ -139,7 +139,10 @@
 									"formatSettings": {
 										"type": "DelimitedTextWriteSettings",
 										"quoteAllText": true,
-										"fileExtension": ".txt"
+										"fileExtension": {
+											"value": "@concat(item().name,'.csv')",
+											"type": "Expression"
+										}
 									}
 								},
 								"enableStaging": false,
@@ -168,7 +171,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "parameterdata",
+									"referenceName": "csv_landling",
 									"type": "DatasetReference"
 								}
 							]
