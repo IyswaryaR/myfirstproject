@@ -5,8 +5,6 @@
 			{
 				"name": "landing_to_input",
 				"type": "Copy",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -76,7 +74,9 @@
 						"referenceName": "orgsource",
 						"type": "DatasetReference"
 					},
-					"fieldList": [],
+					"fieldList": [
+						"childItems"
+					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"enablePartitionDiscovery": false
@@ -89,8 +89,6 @@
 			{
 				"name": "ForEach1",
 				"type": "ForEach",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Get Metadata1",
@@ -154,8 +152,16 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "orgsource",
-									"type": "DatasetReference"
+									"referenceName": "parameterdata",
+									"type": "DatasetReference",
+									"parameters": {
+										"ds_container": "adfproject",
+										"ds_folder": "input1",
+										"ds_file": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
