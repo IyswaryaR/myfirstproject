@@ -281,7 +281,13 @@
 			}
 		],
 		"parameters": {
-			"Filename": {
+			"file_name": {
+				"type": "string"
+			},
+			"container": {
+				"type": "string"
+			},
+			"folder": {
 				"type": "string"
 			}
 		},
