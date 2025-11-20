@@ -117,18 +117,10 @@
 			{
 				"name": "Filter1",
 				"type": "Filter",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
-				"userProperties": [],
-				"typeProperties": {
-					"items": {
-						"value": "@activity('Get Metadata_audit').output.childItems",
-						"type": "Expression"
-					},
-					"condition": {
-						"value": "@equals(pipeline().parameters.Filename,activity('Get Metadata_audit').output.childItems)",
-						"type": "Expression"
-					}
-				}
+				"userProperties": []
 			},
 			{
 				"name": "Notebook1",
