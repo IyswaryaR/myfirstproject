@@ -236,7 +236,7 @@
 											"type": "Expression"
 										},
 										"ds_filename": {
-											"value": "@concat(item().name,'.csv')\n",
+											"value": "@concat(split(item().name, '.')[0], '.csv')\n\n",
 											"type": "Expression"
 										}
 									}
