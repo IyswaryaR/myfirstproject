@@ -256,6 +256,34 @@
 						}
 					]
 				}
+			},
+			{
+				"name": "ForEach_from_lookup",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "lookup_config",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('lookup_config').output",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "filter_",
+							"type": "Filter",
+							"dependsOn": [],
+							"userProperties": []
+						}
+					]
+				}
 			}
 		],
 		"parameters": {
